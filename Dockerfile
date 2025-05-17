@@ -4,7 +4,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt install -y curl unzip sudo
 
-RUN curl -L https://easypanel.io/install.sh | bash
+# Descargar EasyPanel desde el endpoint correcto
+RUN curl -sSL https://get.easypanel.io | bash
 
 EXPOSE 80
 
